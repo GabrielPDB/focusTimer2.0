@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #e5e5e5;
+  --light-gray-color: hsla(240, 9%, 89%, 1);
+  --selected-card-color: hsla(194, 97%, 31%, 1);
+  --black-color: hsla(240, 6%, 21%, 1);
+
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: var(--black-color);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
+#timer {
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+  text-transform: uppercase;
+  display: flex;
+  gap: 1rem;
+}
+
+#controls {
+  display: flex;
+  justify-content: space-around;
+}
+
+#controls button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+aside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+aside .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2.4rem;
+  padding: 4.8rem;
+  background: var(--light-gray-color);
+  cursor: pointer;
+  transition: 400ms;
+}
+
+aside .card.selected {
+  background: var(--selected-card-color);
+}
+
+aside .card.selected svg path {
+  fill: var(--background-color);
+}
